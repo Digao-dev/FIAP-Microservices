@@ -1,0 +1,280 @@
+page-home {
+	$colorPrimary : #8819b3;
+
+	.scroll-content{ background-color: $colorPrimary; overflow: hidden !important; }
+
+	.desativar_conteudo_slide{ margin-top: 0%; transition: margin 700ms; }
+	.active_conteudo_slide{ margin-top: 130%; transition: margin 700ms; }
+
+
+	.slider-primary{ 
+		padding-top: 15%; 
+		height: 420px;
+
+		 .swiper-pagination-bullet{
+		 	background: #fff !important;
+    		opacity: .4 !important;
+    		height: 5px !important;
+    		width: 5px !important;
+		 }
+		 .swiper-pagination-bullet-active{
+		 	background: #fff !important;
+		 	opacity: .9 !important;
+		 }
+		 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+		 	 margin: 0 2.5px !important;
+		 }
+
+		.slide-nubank{
+			 height: 320px;
+
+			.box-slide{
+				background-color: #fff;
+		    	width: 92%;
+		    	height: 320px;
+		   	 	margin: 0 auto;
+		    	border-radius: 2px;
+
+		    	.icone-slide{
+		    		font-size: 25px;
+   					color: #424242;
+   					position: absolute;
+    				left: 35px;
+    				top: 20px;
+		    	}
+		    	.icone-slide-center{
+		    		font-size: 25px;
+    				padding-top: 20px;
+		    	}
+
+		    	.fatura-slide{
+		    		text-align: left;
+    				padding-top: 30%;
+    				padding-left: 20px;
+
+	    			.title-fatura{ text-transform: uppercase; color: #1bb6ea; margin: 0px; font-size: 14px; padding-bottom: 5px; }
+			    	.preco-fatura{ 
+			    		color: #1bb6ea;
+			    		margin: 0px;
+			    		font-size: 28px;
+			    		font-weight: bold;
+			    		padding-bottom: 4px;
+
+			    		span{
+			    			font-weight: 400;
+			    		}
+			    	}
+			    	.limite-fatura{ 
+			    		margin: 0px;
+			    		font-size: 14px;
+			    		span{
+			    			color: #07b507;
+			    			font-weight: bold;
+			    		}
+			    	}
+		    	}
+	    		.overlay-slide{
+		    		background-color: #f7f6f6;
+				    position: absolute;
+				    height: 22%;
+				    width: 92%;
+				    bottom: 0;
+		    		.icone-card-slide{
+					    color: #424242;
+					    font-size: 25px;
+					    position: absolute;
+					    left: 20px;
+					    top: 20px;
+		    		}
+		    		p{
+		    			font-size: 12px;
+					    text-align: left;
+					    padding-left: 55px;
+					    padding-right: 35px;
+					    margin-top: 20px;
+					    color: #424242;
+		    		}
+		    		.icone-flexa-slide{
+		    			position: absolute;
+					    right: 18px;
+					    top: 30px;
+					    font-size: 16px;
+					    color: #7f7d7d;
+		    		}
+		    	}
+
+		    	.barra-colorida-slide{
+					background: -webkit-linear-gradient(top, rgba(250,131,40,1) 0%, rgba(241,111,92,1) 31%, rgba(27,182,234,1) 31%, rgba(27,182,234,1) 47%, rgba(27,182,234,1) 47%, rgba(240,47,23,1) 47%, rgba(7,181,7,1) 47%, rgba(7,181,7,1) 100%);
+					position: absolute;
+				    height: 63%;
+				    right: 30px;
+				    top: 20px;
+				    border-radius: 5px;
+				    width: 8px;
+		    	}
+
+		    	.nuconta-slide{
+		    		text-align: left;
+    				padding-top: 20%;
+    				padding-left: 20px;
+		    		.saldo-nuconta{
+		    			margin: 0px;
+					    font-size: 15px;
+					    padding-bottom: 5px;
+		    		}
+		    		.valor-nuconta{
+						margin: 0px;
+					    font-size: 28px;
+					    font-weight: 400;
+					    padding-bottom: 4px;
+					    span{
+					    	font-weight: 400;
+					    }
+		    		}
+		    	}
+		    	.reward-slide{
+		    		p{
+		    			margin: 0px;
+		    			font-size: 14px;
+    					line-height: 22px;
+		    		}
+		    		.btn-reward{
+		    			color: #8819b3;
+					    padding: 22px;
+					    font-size: 12px;
+					    margin-top: 80px;
+					    background-color: transparent;
+					    box-shadow: none;
+					    border: 1px solid #8819b3;
+					    width: 75%;
+					    border-radius: 4px;
+		    		}
+		    	}
+		    	
+			}
+
+			.swiper-wrapper{ height: 50%; }
+		}
+	}
+
+	.slider-menu{
+		position: absolute;
+	    bottom: 0px;
+	    height: 15%;
+
+	    .slide-menu-item{
+	    	color: white;
+	    	height: 75px;
+	    	width: 75px;
+	    	border-radius: 4px;
+	    	background-color: rgba(250,250,250,0.28);
+	    	color: white;
+	    	margin: 0 auto;
+
+	    	ion-icon{
+	    	    font-size: 25px;
+			    /* border: 1px solid black; */
+			    height: 50%;
+			    width: 100%;
+			    text-align: left;
+			    padding-left: 8px;
+			    padding-top: 8px;
+	    	}
+
+	    	h5{
+	    		font-size: 12px;
+			    margin: 0px;
+			    text-align: left;
+			    padding-left: 8px;
+			    margin-top: 20%;
+	    	}
+
+	    }
+	}
+
+	.logo-nubank{
+    	text-align: center;
+    	color: white;
+    	padding-top: 20px;
+
+    	ion-icon{ font-size: 24px; }
+
+    	img{
+    		width: 27px;
+    		height: 27px;
+    		margin-right: 10px;
+    		margin-bottom: -7px;
+    	}
+	}
+
+	.menu_desativado{
+		display: none;
+		transition: margin 700ms;
+		position: absolute;
+	}
+	.menu_ativo{
+		display: block;
+		transition: margin 700ms;
+		position: absolute;
+		z-index: 999;
+	    top: 12%;
+	    width: 100%;
+    	text-align: center;
+	}
+
+	.banco-nubank{
+		text-align: center;
+		img{
+			width: 80px;
+			margin-bottom: 5px;
+		}
+		p{
+			color: white;
+			margin: 0px;
+			line-height: 20px;
+			font-weight: bold;
+		}
+
+		
+	}
+
+	.menu-nubank{
+		.items-menu-nubank{
+			margin-top: 20px;
+			.item-menu{
+				ion-icon{
+					font-size: 24px;
+					margin-right: 0px;
+				}
+			    width: 80%;
+			    margin: 0 auto;
+			    /* margin-right: 30px; */
+			    font-size: 15px;
+			    border-bottom: 1px solid rgba(250,250,250,0.5);
+			    background-color: transparent;
+			    color: white;
+
+			    ion-label{
+			    	font-weight: bold;
+			    	font-size: 14px;
+			    }
+			}
+
+
+		    .btn-sair{
+		    	width: 80%;
+			    margin-top: 10px;
+			    border: 1px solid rgba(250,250,250,0.5);
+			    background-color: transparent;
+			    box-shadow: none;
+			    border-radius: 4px;
+			    font-size: 12px;
+			    font-weight: bold;
+		    }
+		}
+	}
+
+
+	
+
+}
