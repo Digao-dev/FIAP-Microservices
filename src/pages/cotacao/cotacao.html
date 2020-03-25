@@ -1,0 +1,15 @@
+<!--
+  Generated template for the CotacaoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header></ion-header>
+<ion-content padding>
+  <div class="conteudo">
+    <h1>Qual quantidade você deseja cotar com o valor atual do dólar?</h1>
+    <ion-input class="quantidade" type="number" name="quantidade" [(ngModel)]="quantidade"></ion-input>
+    <button class="btn-cotacao" ion-button (click)="getCotacao()">Cotar</button>
+  </div>
+</ion-content>

@@ -1,180 +1,76 @@
 <ion-content no-bounce style="overflow: hidden !important; ">
 
-  <div class="logo-nubank" (click)="openMenu()">
-
+  <div class="logo-nubank">
     <img src="assets/imgs/logo_nu.png" style="display: inline;">
-    <h5 style="display: inline;">Rodrigo</h5><br>
-    <ion-icon name="{{icon_conteudo_slide}}"></ion-icon>
+    <h5 style="display: inline;">Rodrigo</h5>
   </div>
-
 
   <div class="conteudo-slide {{conteudo_slide}}">
-  <div class="menu-nubank {{status_menu}}">
-    <div class="banco-nubank">
-      <img src="assets/imgs/qr.jpg">
-      <p>Banco 300 - NU Payments BR</p> 
-      <p>Agência 0002</p>
-      <p>Conta 2284813-0</p>
-    </div>
+    <ion-slides #sliderPrimary  class="slider-primary" pager="true" centeredSlides="true">
+      <ion-slide class="slide-nubank">
+        <div class="box-slide">
+          <ion-icon class="icone-slide" name="ios-card-outline"></ion-icon>
 
-    <div class="items-menu-nubank">
-      <ion-item style="border-top: 1px solid rgba(250,250,250,0.5);" class="item-menu" no-lines>
-        <ion-icon item-start name="md-information-circle"></ion-icon>
-        Me ajuda
-      </ion-item>
+          <div class="fatura-slide">
+            <p class="title-fatura">Fatura atual</p>
+            <h5 class="preco-fatura"><span>R$</span> 8.580,21</h5>
+            <p class="limite-fatura">Limite disponível: <span>R$ 17.320,50 </span></p>
+          </div>
 
-      <ion-item  class="item-menu" no-lines>
-        <ion-icon item-start name="md-contact"></ion-icon>
-        Perfil
-      </ion-item>
+          <div class="overlay-slide">
+            <ion-icon class="icone-card-slide" name="ios-cart-outline"></ion-icon>
+            <p>Compra mais recente em Sony Playstation no valor de R$ 120,00 ontem</p>
+            <ion-icon class="icone-flexa-slide" name="ios-arrow-forward"></ion-icon>
+          </div>
 
-      <ion-item  class="item-menu" no-lines>
-        <ion-icon item-start name="logo-usd"></ion-icon>
-        Configurar NuConta
-      </ion-item>
+          <div class="barra-colorida-slide"></div>
+        </div>
+      </ion-slide>
 
-      <ion-item  class="item-menu" no-lines>
-        <ion-icon item-start name="ios-card"></ion-icon>
-        Configurar Cartão
-      </ion-item>
+      <ion-slide class="slide-nubank" (click)="openCotacaoPage()">
+        <div class="box-slide">
+          <ion-icon class="icone-slide" name="ios-cash-outline"></ion-icon>
+          <div class="nuconta-slide">
+            <h5>Cotação do Dólar</h5>
+            <p class="saldo-nuconta">
+              Suas compras feitas no cartão internacional utilizam a cotação
+              dólar do dia anterior informado pelo BACEN, adicionando 4% de SPREAD
+              e 6.38% de IOF.
+            </p>
+            <h5 class="valor-nuconta">R$ 5,00</h5>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
 
-      <ion-item  class="item-menu" no-lines>
-        <ion-icon item-start name="ios-flag-outline"></ion-icon>
-        Configurações do app
-      </ion-item>
+    <ion-slides #sliderMenu class="slider-menu" centeredSlides="false" slidesPerView="4" *ngIf="slideMenuStatus">
+      <ion-slide class="slide-menu">
+        <div class="slide-menu-item">
+            <ion-icon name="md-person-add"></ion-icon>
+            <h5>Menu</h5>
+        </div>
+      </ion-slide>
 
-      <button ion-button class="btn-sair">
-        Sair do app
-      </button>
-    </div>
+      <ion-slide class="slide-menu">
+        <div class="slide-menu-item">
+          <ion-icon name="logo-usd"></ion-icon>
+            <h5>Menu</h5>
+        </div>
+      </ion-slide>
 
+      <ion-slide class="slide-menu">
+        <div class="slide-menu-item">
+        <ion-icon name="ios-card"></ion-icon>
+            <h5>Menu</h5>
+        </div>
+      </ion-slide>
+
+      <ion-slide class="slide-menu">
+        <div class="slide-menu-item">
+            <ion-icon name="ios-chatbubbles"></ion-icon>
+            <h5>Menu</h5>
+        </div>
+      </ion-slide>
+    </ion-slides>
   </div>
-  <ion-slides #sliderPrimary  class="slider-primary" pager="true" centeredSlides="true">
-
-    <ion-slide class="slide-nubank">
-      <div class="box-slide">
-        <ion-icon class="icone-slide" name="ios-card-outline"></ion-icon>
-
-        <div class="fatura-slide">
-          <p class="title-fatura">Fatura atual</p>
-          <h5 class="preco-fatura"><span>R$</span> 8.580,21</h5>
-          <p class="limite-fatura">Limite disponível: <span>R$ 17.320,50 </span></p>
-        </div>
-
-
-        <div class="overlay-slide">
-          <ion-icon class="icone-card-slide" name="ios-cart-outline"></ion-icon>
-          <p>Compra mais recente em Sony Playstation no valor de R$ 120,00 ontem</p>
-          <ion-icon class="icone-flexa-slide" name="ios-arrow-forward"></ion-icon>
-        </div>
-
-        <div class="barra-colorida-slide"></div>
-      </div>
-    </ion-slide>
-
-    <ion-slide class="slide-nubank">
-      <div class="box-slide">
-        <ion-icon class="icone-slide" name="ios-cash-outline"></ion-icon>
-        <div class="nuconta-slide">
-          <h5>Cotação do dolar</h5>
-          <p class="saldo-nuconta">Acompanhe a cotação diária do Dolar.</p>
-          <p class="saldo-nuconta">Cotação do Dolar com IOF e Spread.</p>
-          <h5 class="valor-nuconta"><span>R$</span> 5,00</h5>
-        </div>
-
-        <div class="overlay-slide">
-          <!--
-          <ion-icon class="icone-card-slide" name="ios-cart-outline"></ion-icon>
-          <p> </p>
-          <ion-icon class="icone-flexa-slide" name="ios-arrow-forward"></ion-icon> 
-        -->
-        </div>
-      </div>
-    </ion-slide>
-
-    <ion-slide class="slide-nubank">
-      <div class="box-slide">
-        <ion-icon class="icone-slide-center" name="ios-cash-outline"></ion-icon>
-        <div class="reward-slide">
-          <h5>Calcule quanto quer cotar</h5>
-          <p><br>Quanto você quer cotar?</p>
-          <h5>R$</h5>
-          <input type="number" name="input" value= "">
-
-          <button class="btn-reward" ion-button>Cotar</button>
-        </div>
-      </div>
-    </ion-slide>
-
-  </ion-slides>
-
-
-<!--  -->
-  <ion-slides #sliderMenu class="slider-menu" centeredSlides="false" slidesPerView="4" *ngIf="slideMenuStatus">
-
-    <ion-slide class="slide-menu">
-      <div class="slide-menu-item">
-          <ion-icon name="md-person-add"></ion-icon>
-          <h5>Menu</h5>
-      </div>
-    </ion-slide>
-
-    <ion-slide class="slide-menu">
-      <div class="slide-menu-item">
-        <ion-icon name="logo-usd"></ion-icon>
-          <h5>Menu</h5>
-      </div>
-    </ion-slide>
-
-    <ion-slide class="slide-menu">
-      <div class="slide-menu-item">
-       <ion-icon name="ios-card"></ion-icon>
-          <h5>Menu</h5>
-      </div>
-    </ion-slide>
-
-    <ion-slide class="slide-menu">
-      <div class="slide-menu-item">
-          <ion-icon name="ios-chatbubbles"></ion-icon>
-          <h5>Menu</h5>
-      </div>
-    </ion-slide>
-
-
-     <ion-slide class="slide-menu">
-      <div class="slide-menu-item">
-          <ion-icon name="md-information-circle"></ion-icon>
-          <h5>Menu</h5>
-      </div>
-    </ion-slide>
-
-    <ion-slide class="slide-menu">
-      <div class="slide-menu-item">
-         <ion-icon name="md-hammer"></ion-icon>
-         <h5>Menu</h5>
-      </div>
-    </ion-slide>
-
-    <ion-slide class="slide-menu">
-      <div class="slide-menu-item">
-         <ion-icon name="md-qr-scanner"></ion-icon>
-         <h5>Menu</h5>
-      </div>
-    </ion-slide>
-
-    <ion-slide class="slide-menu">
-      <div class="slide-menu-item">
-          <ion-icon name="md-hand"></ion-icon>
-          <h5>Menu</h5>
-      </div>
-    </ion-slide>
-
-  </ion-slides>
-  </div>
-
-
-
-
-
-
 </ion-content>

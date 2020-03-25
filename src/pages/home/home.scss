@@ -6,7 +6,6 @@ page-home {
 	.desativar_conteudo_slide{ margin-top: 0%; transition: margin 700ms; }
 	.active_conteudo_slide{ margin-top: 130%; transition: margin 700ms; }
 
-
 	.slider-primary{ 
 		padding-top: 15%; 
 		height: 420px;
@@ -132,25 +131,6 @@ page-home {
 					    }
 		    		}
 		    	}
-		    	.reward-slide{
-		    		p{
-		    			margin: 0px;
-		    			font-size: 14px;
-    					line-height: 22px;
-		    		}
-		    		.btn-reward{
-		    			color: #8819b3;
-					    padding: 22px;
-					    font-size: 12px;
-					    margin-top: 40px;
-					    background-color: transparent;
-					    box-shadow: none;
-					    border: 1px solid #8819b3;
-					    width: 75%;
-					    border-radius: 4px;
-		    		}
-		    	}
-		    	
 			}
 
 			.swiper-wrapper{ height: 50%; }
