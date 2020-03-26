@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { CotacaoProvider } from '../../providers/cotacao/cotacao';
+import { HttpClient } from '@angular/common/http';
 
 /**
  * Generated class for the CotacaoPage page.
@@ -18,21 +17,24 @@ import { CotacaoProvider } from '../../providers/cotacao/cotacao';
 export class CotacaoPage {
 
   public quantidade: number;
-  /**
-   * Valores setados como default pois o serviço
-   * para pegar cotação do dólar não foi construído.
-  */
-  public moeda: string = 'USD';
-  public valorVendaMoeda: number = 5.0;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public cotacaoProvider: CotacaoProvider) { }
+    public http: HttpClient) { }
 
   getCotacao() {
-    console.log(
-      this.cotacaoProvider.getCotacao(this.moeda, this.valorVendaMoeda, this.quantidade)
-    );
+    let data = JSON.stringify({
+      'moeda': 'USD',
+      'valorVendaMoeda': 5.0,
+      'quantidade': this.quantidade
+    });
+
+     // nada acontece
+    return this.http.post(
+      'http://192.168.99.100:8080/cotacao', 
+      data, 
+      { headers: { 'Content-Type': 'application/json' }})
+      .subscribe(data => console.log("data: " + data));
   }
 }
