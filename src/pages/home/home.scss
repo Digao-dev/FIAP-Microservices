@@ -1,21 +1,30 @@
 page-home {
 	$colorPrimary : #8819b3;
 
-	.scroll-content{ background-color: $colorPrimary; overflow: hidden !important; }
+	.logo-nubank{
+    	text-align: center;
+    	color: white;
+    	padding-top: 5%;
 
-	.desativar_conteudo_slide{ margin-top: 0%; transition: margin 700ms; }
-	.active_conteudo_slide{ margin-top: 130%; transition: margin 700ms; }
+    	ion-icon { font-size: 24px; }
+
+    	img{
+    		width: 10%;
+    		height: 10%;
+    		margin-right: 3%;
+    		margin-bottom: -2%;
+    	}
+	}
+
+	.scroll-content{ 
+		background-color: $colorPrimary; 
+		overflow: hidden !important; 
+	}
 
 	.slider-primary{ 
-		padding-top: 15%; 
+		padding-top: 15%;
 		height: 420px;
 
-		 .swiper-pagination-bullet{
-		 	background: #fff !important;
-    		opacity: .4 !important;
-    		height: 5px !important;
-    		width: 5px !important;
-		 }
 		 .swiper-pagination-bullet-active{
 		 	background: #fff !important;
 		 	opacity: .9 !important;
@@ -136,125 +145,4 @@ page-home {
 			.swiper-wrapper{ height: 50%; }
 		}
 	}
-
-	.slider-menu{
-		position: absolute;
-	    bottom: 0px;
-	    height: 15%;
-
-	    .slide-menu-item{
-	    	color: white;
-	    	height: 75px;
-	    	width: 75px;
-	    	border-radius: 4px;
-	    	background-color: rgba(250,250,250,0.28);
-	    	color: white;
-	    	margin: 0 auto;
-
-	    	ion-icon{
-	    	    font-size: 25px;
-			    /* border: 1px solid black; */
-			    height: 50%;
-			    width: 100%;
-			    text-align: left;
-			    padding-left: 8px;
-			    padding-top: 8px;
-	    	}
-
-	    	h5{
-	    		font-size: 12px;
-			    margin: 0px;
-			    text-align: left;
-			    padding-left: 8px;
-			    margin-top: 20%;
-	    	}
-
-	    }
-	}
-
-	.logo-nubank{
-    	text-align: center;
-    	color: white;
-    	padding-top: 20px;
-
-    	ion-icon{ font-size: 24px; }
-
-    	img{
-    		width: 27px;
-    		height: 27px;
-    		margin-right: 10px;
-    		margin-bottom: -7px;
-    	}
-	}
-
-	.menu_desativado{
-		display: none;
-		transition: margin 700ms;
-		position: absolute;
-	}
-	.menu_ativo{
-		display: block;
-		transition: margin 700ms;
-		position: absolute;
-		z-index: 999;
-	    top: 12%;
-	    width: 100%;
-    	text-align: center;
-	}
-
-	.banco-nubank{
-		text-align: center;
-		img{
-			width: 80px;
-			margin-bottom: 5px;
-		}
-		p{
-			color: white;
-			margin: 0px;
-			line-height: 20px;
-			font-weight: bold;
-		}
-
-		
-	}
-
-	.menu-nubank{
-		.items-menu-nubank{
-			margin-top: 20px;
-			.item-menu{
-				ion-icon{
-					font-size: 24px;
-					margin-right: 0px;
-				}
-			    width: 80%;
-			    margin: 0 auto;
-			    /* margin-right: 30px; */
-			    font-size: 15px;
-			    border-bottom: 1px solid rgba(250,250,250,0.5);
-			    background-color: transparent;
-			    color: white;
-
-			    ion-label{
-			    	font-weight: bold;
-			    	font-size: 14px;
-			    }
-			}
-
-
-		    .btn-sair{
-		    	width: 80%;
-			    margin-top: 10px;
-			    border: 1px solid rgba(250,250,250,0.5);
-			    background-color: transparent;
-			    box-shadow: none;
-			    border-radius: 4px;
-			    font-size: 12px;
-			    font-weight: bold;
-		    }
-		}
-	}
-
-
-	
-
 }
