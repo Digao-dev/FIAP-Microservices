@@ -4,7 +4,7 @@
     <img src="assets/imgs/logo_nu.png" style="display: inline;">
     <h5 style="display: inline;">Rodrigo</h5>
   </div>
-
+  
   <div class="conteudo-slide {{conteudo_slide}}">
     <ion-slides #sliderPrimary  class="slider-primary" pager="true" centeredSlides="true">
       <ion-slide class="slide-nubank">
@@ -18,11 +18,10 @@
           </div>
 
           <div class="overlay-slide">
-            <ion-icon class="icone-card-slide" name="ios-cart-outline"></ion-icon>
+            <ion-icon class="icone-slide" name="ios-cart-outline"></ion-icon>
             <p>Compra mais recente em Sony Playstation no valor de R$ 120,00 ontem</p>
             <ion-icon class="icone-flexa-slide" name="ios-arrow-forward"></ion-icon>
           </div>
-
           <div class="barra-colorida-slide"></div>
         </div>
       </ion-slide>
@@ -30,14 +29,14 @@
       <ion-slide class="slide-nubank" (click)="openCotacaoPage()">
         <div class="box-slide">
           <ion-icon class="icone-slide" name="ios-cash-outline"></ion-icon>
-          <div class="nuconta-slide">
-            <h5>Cotação do Dólar</h5>
-            <p class="saldo-nuconta">
-              Suas compras feitas no cartão internacional utilizam a cotação
-              dólar do dia anterior informado pelo BACEN, adicionando 4% de SPREAD
-              e 6.38% de IOF.
-            </p>
-            <h5 class="valor-nuconta">R$ 5,00</h5>
+          <div class="cotacao-slide">
+            <p class="title-cotacao">Cotação do dólar para compras internacionais</p>
+            <h5 class="valor-moeda">R$ 5,00</h5>
+          </div>
+
+          <div class="overlay-slide">
+            <ion-icon class="icone-slide" name="ios-cart-outline"></ion-icon>
+            <p>Cotação mais recente feita em {{ultimaCompra.dataHora}} no valor de R$ {{ultimaCompra.valorTotalComTaxas}}</p>
           </div>
         </div>
       </ion-slide>

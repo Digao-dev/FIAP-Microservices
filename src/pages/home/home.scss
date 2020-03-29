@@ -1,14 +1,14 @@
 page-home {
 	$colorPrimary : #8819b3;
 
-	.logo-nubank{
+	.logo-nubank {
     	text-align: center;
     	color: white;
     	padding-top: 5%;
 
     	ion-icon { font-size: 24px; }
 
-    	img{
+    	img {
     		width: 10%;
     		height: 10%;
     		margin-right: 3%;
@@ -16,102 +16,112 @@ page-home {
     	}
 	}
 
-	.scroll-content{ 
+	.scroll-content { 
 		background-color: $colorPrimary; 
 		overflow: hidden !important; 
 	}
 
-	.slider-primary{ 
+	.slider-primary { 
 		padding-top: 15%;
 		height: 420px;
 
-		 .swiper-pagination-bullet-active{
+		 .swiper-pagination-bullet-active {
 		 	background: #fff !important;
 		 	opacity: .9 !important;
 		 }
-		 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+
+		 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
 		 	 margin: 0 2.5px !important;
 		 }
 
-		.slide-nubank{
-			 height: 320px;
+		.slide-nubank {
+			 height: 90%;
 
-			.box-slide{
+			.box-slide {
 				background-color: #fff;
 		    	width: 92%;
 		    	height: 320px;
 		   	 	margin: 0 auto;
-		    	border-radius: 2px;
+				border-radius: 2px;
+				text-align: left;
+				padding-top: 30%;
+				padding-left: 6.5%;
 
-		    	.icone-slide{
+		    	.icone-slide {
 		    		font-size: 25px;
    					color: #424242;
    					position: absolute;
-    				left: 35px;
-    				top: 20px;
-		    	}
-		    	.icone-slide-center{
-		    		font-size: 25px;
-    				padding-top: 20px;
-		    	}
+    				left: 10%;
+    				top: 5%;
+				}
 
-		    	.fatura-slide{
-		    		text-align: left;
-    				padding-top: 30%;
-    				padding-left: 20px;
+		    	.fatura-slide {
+	    			.title-fatura { 
+						text-transform: uppercase;
+						color: #1bb6ea; 
+						margin: 0px; 
+						font-size: 14px; 
+						padding-bottom: 2%; 
+						font-weight: bold;
+					}
 
-	    			.title-fatura{ text-transform: uppercase; color: #1bb6ea; margin: 0px; font-size: 14px; padding-bottom: 5px; }
-			    	.preco-fatura{ 
+			    	.preco-fatura {
 			    		color: #1bb6ea;
 			    		margin: 0px;
 			    		font-size: 28px;
 			    		font-weight: bold;
-			    		padding-bottom: 4px;
+			    		padding-bottom: 2%;
 
-			    		span{
+			    		span {
 			    			font-weight: 400;
 			    		}
-			    	}
-			    	.limite-fatura{ 
+					}
+					
+			    	.limite-fatura { 
 			    		margin: 0px;
 			    		font-size: 14px;
-			    		span{
+			    		span {
 			    			color: #07b507;
 			    			font-weight: bold;
 			    		}
 			    	}
-		    	}
+				}
+
 	    		.overlay-slide{
 		    		background-color: #f7f6f6;
 				    position: absolute;
 				    height: 22%;
 				    width: 92%;
-				    bottom: 0;
-		    		.icone-card-slide{
+					bottom: 0;
+					margin-left: -6.5%;
+					
+		    		.icone-slide {
 					    color: #424242;
 					    font-size: 25px;
 					    position: absolute;
-					    left: 20px;
-					    top: 20px;
+					    left: 5%;
+					    top: 30%;
 		    		}
-		    		p{
+					
+					p {
 		    			font-size: 12px;
 					    text-align: left;
-					    padding-left: 55px;
-					    padding-right: 35px;
-					    margin-top: 20px;
+					    padding-left: 15%;
+					    padding-right: 20%;
+					    margin-top: 6%;
 					    color: #424242;
-		    		}
-		    		.icone-flexa-slide{
+					}
+					
+		    		.icone-flexa-slide {
 		    			position: absolute;
-					    right: 18px;
-					    top: 30px;
+					    right: 5%;
+					    top: 40%;
 					    font-size: 16px;
 					    color: #7f7d7d;
 		    		}
 		    	}
 
-		    	.barra-colorida-slide{
+		    	.barra-colorida-slide {
 					background: -webkit-linear-gradient(top, rgba(250,131,40,1) 0%, rgba(241,111,92,1) 31%, rgba(27,182,234,1) 31%, rgba(27,182,234,1) 47%, rgba(27,182,234,1) 47%, rgba(240,47,23,1) 47%, rgba(7,181,7,1) 47%, rgba(7,181,7,1) 100%);
 					position: absolute;
 				    height: 63%;
@@ -121,28 +131,20 @@ page-home {
 				    width: 8px;
 		    	}
 
-		    	.nuconta-slide{
-		    		text-align: left;
-    				padding-top: 20%;
-    				padding-left: 20px;
-		    		.saldo-nuconta{
-		    			margin: 0px;
-					    font-size: 15px;
-					    padding-bottom: 5px;
-		    		}
-		    		.valor-nuconta{
-						margin: 0px;
+		    	.cotacao-slide {
+					.title-cotacao {
+						color: #424242; 
+						margin: 0px; 
+						font-size: 15px; 
+						padding-bottom: 2%;
+					}
+					
+		    		.valor-moeda {
+						margin: 0%;
 					    font-size: 28px;
-					    font-weight: 400;
-					    padding-bottom: 4px;
-					    span{
-					    	font-weight: 400;
-					    }
 		    		}
 		    	}
 			}
-
-			.swiper-wrapper{ height: 50%; }
 		}
 	}
 }

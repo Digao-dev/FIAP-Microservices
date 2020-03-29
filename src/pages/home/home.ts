@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
-import { Slides, NavController } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
 
 import { CotacaoPage } from '../cotacao/cotacao'
 
@@ -8,18 +9,27 @@ import { CotacaoPage } from '../cotacao/cotacao'
   templateUrl: 'home.html'
 })
 export class HomePage {
-  @ViewChild('sliderPrimary') sliderPrimary: Slides;
-  @ViewChild('sliderMenu') sliderMenu: Slides;
+  ultimaCompra: any;
 
-  public slideMenuStatus:boolean = true;
-
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, public http: HttpClient) {
+    this.ultimaCompra = '';
+  }
 
   openCotacaoPage() {
     this.navCtrl.push(CotacaoPage);
   }
 
-  ngAfterViewInit() {
-    this.sliderPrimary.centeredSlides = true;
+  ionViewWillEnter() {
+    const HEADERS  = { 
+      headers: { 'Content-Type': 'application/json' }
+    }
+
+    this.http.get('http://192.168.99.100:8080/conversao', HEADERS)
+    .subscribe(
+      response => {
+        this.ultimaCompra = response;
+      }, 
+      error => { console.log(JSON.stringify(error.json())) }
+    );
   }
 }
